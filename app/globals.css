@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.wrapper {
+  max-width: 1150px;
+  margin-inline: 1.5rem;
+}
+.section {
+  padding-block: 5rem 1rem;
+}
+@media screen and (min-width: 1150px) {
+  .wrapper {
+    margin-inline: auto;
+  }
+  .section {
+    padding-block: 7rem 1rem;
+  }
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}

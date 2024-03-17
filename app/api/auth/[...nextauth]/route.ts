@@ -7,7 +7,7 @@ import { env } from "@/lib/env";
 import NextAuth from "next-auth/next";
 import { mergerAnonymousCartIntoUserCart } from "@/lib/db/cart";
 
-export const authOptions: NextAuthOptions = {
+const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prisma) as Adapter,
   providers: [
     GoogleProvider({
@@ -26,7 +26,7 @@ export const authOptions: NextAuthOptions = {
       await mergerAnonymousCartIntoUserCart(user.id);
     },
   },
-  secret: env.NEXTAUTH_SERCET
+  secret: env.NEXTAUTH_SERCET,
 };
 
 const handler = NextAuth(authOptions);

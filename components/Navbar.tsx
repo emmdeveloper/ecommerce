@@ -31,15 +31,18 @@ export default async function Navbar() {
           </Link>
         </div>
 
-        <div className="flex items-center gap-2">
-          <div className="flex-none gap-2 -ml-auto">
+        <div
+          className="flex items-center gap-2
+        "
+        >
+          <div className="flex-none gap-2 sm:-ml-auto">
             <form action={SearchProduct}>
               <div className="form-control">
                 <input
                   type="text"
                   name="searchQuery"
                   placeholder="Search"
-                  className="input w-full min-w-[100px] "
+                  className="hidden sm:input sm:block w-full sm:min-w-[100px] "
                 />
               </div>
             </form>
